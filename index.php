@@ -12,36 +12,47 @@
      public $minutes;
      public $year_release;
 
-     function __costructor(String $title ,String $category,String $minutes,String $year_release){
+     function __construct(String $title ,String $category,String $minutes,String $year_release){
          $this->title = $title;
          $this->category = $category;
          $this->minutes = $minutes;
          $this->year_release = $year_release;
      }
      
-     /**
-      * @return title, title of the film;
-      
-        
-      */
-     public function get_title(){
-         return $this->title;
-     }
-     public function get_category(){
-        return $this->category;
-    }
-    public function get_minutes(){
-        return $this->minutes;
-    }
-    public function get_year_release(){
-        return $this->year_release;
-    }
+    
+    
  };
 
  $film= new Movie('Avengers', 'Fantascienza', '90', '2018');
- $film ->title = 'avengers';
+ 
+ var_dump($film);
+
+ ?>
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+
+<?php
+$film= new Movie('Avengers', 'Fantascienza', '90', '2018');
+$film ->title = 'avengers';
 $film ->category = 'fantascienza';
 $film ->minutes = '120';
 $film ->year_release = '2018';
- var_dump($film);
+echo $film->title;
+echo $film->category;
+echo $film->minutes;
+echo $film->year_release;
+
+
+?>
+     
+ </body>
+ </html>
 
