@@ -12,11 +12,19 @@
      public $minutes;
      public $year_release;
 
-     function __construct(String $title ,String $category,String $minutes,String $year_release){
+     public function SetDate($year_release){
+         if($year_release < 2007){
+             $this->year_release = $year_release . "non supporta la qualità HD";
+         }else{
+             $this->year_release = $year_release . "Supporta la qualità HD";
+         }
+     }
+     
+     function __construct(String $title ,String $category,String $minutes){
          $this->title = $title;
          $this->category = $category;
          $this->minutes = $minutes;
-         $this->year_release = $year_release;
+         
      }
      
     
@@ -24,7 +32,7 @@
  };
 
  $film= new Movie('Avengers', 'Fantascienza', '90', '2018');
- 
+ $film->SetDate('2012');
  var_dump($film);
 
  ?>
@@ -40,11 +48,7 @@
  <body>
 
 <?php
-$film= new Movie('Avengers', 'Fantascienza', '90', '2018');
-$film ->title = 'avengers';
-$film ->category = 'fantascienza';
-$film ->minutes = '120';
-$film ->year_release = '2018';
+
 echo $film->title;
 echo $film->category;
 echo $film->minutes;
