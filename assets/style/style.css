@@ -1,0 +1,30 @@
+.container {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    aspect-ratio: 1/ 1;
+}
+
+.text {
+    list-style: none;
+}
+
+.card {
+    width: 300px;
+}
+
+.container-fluid {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(91, 148, 202);
+}
+
+.col {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}
